@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Bright Aesthetic Color Palette */
+    --color-primary: #3B82F6; /* Bright blue */
+    --color-secondary: #F97316; /* Soft orange */
+    --color-accent: #10B981; /* Soft green */
+    --color-neutral: #64748B; /* Medium gray for better readability */
+    --color-base-100: #F8FAFC; /* Soft white background */
+    --color-base-200: #F1F5F9; /* Light background */
+    --color-base-300: #E2E8F0; /* Medium light */
+    --color-base-content: #1E293B; /* Dark text */
+    --color-info: #06B6D4; /* Cyan */
+    --color-success: #10B981; /* Green */
+    --color-warning: #F59E0B; /* Orange */
+    --color-error: #EF4444; /* Red */
+}
+
+/* Modern Card Styles - Premium Hotel Design */
+.modern-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl
+           border border-gray-100/50 transition-all duration-500
+           hover:-translate-y-1 hover:scale-[1.02] overflow-hidden p-6;
+}
+
+.modern-card-image {
+    @apply w-full object-cover rounded-xl transition-all duration-500;
+}
+
+.modern-card-title {
+    @apply text-xl font-semibold text-gray-800 mb-3 leading-tight;
+}
+
+.modern-card-text {
+    @apply text-gray-600 leading-relaxed mb-4;
+}
+
+.modern-card-button {
+    @apply w-full py-3 bg-gradient-to-r from-primary to-blue-600 text-white
+           rounded-xl hover:from-blue-600 hover:to-blue-700
+           transition-all duration-300 font-medium shadow-lg hover:shadow-xl;
+}
